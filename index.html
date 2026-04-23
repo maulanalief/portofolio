@@ -1,0 +1,1166 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reza Maulana – App Support Engineer L2</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar navbar-expand-lg fixed-top glass-nav" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand brand-logo" href="#">
+        <span class="brand-icon"><i class="bi bi-terminal-fill"></i></span>
+        <span class="brand-text">RMAU<span class="brand-dot">.</span></span>
+      </a>
+      <div class="d-flex align-items-center gap-2 ms-auto">
+        <!-- Language Toggle -->
+        <div class="lang-toggle" id="langToggle">
+          <button class="lang-btn active" data-lang="en" onclick="setLang('en')">EN</button>
+          <span class="lang-sep">|</span>
+          <button class="lang-btn" data-lang="id" onclick="setLang('id')">ID</button>
+        </div>
+        <!-- Theme Toggle -->
+        <button class="theme-btn" id="themeToggle" onclick="toggleTheme()" title="Toggle Theme">
+          <i class="bi bi-moon-stars-fill" id="themeIcon"></i>
+        </button>
+        <!-- Hamburger -->
+        <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto gap-1">
+          <li class="nav-item"><a class="nav-link nav-pill" href="#hero" data-i18n="nav_home">Home</a></li>
+          <li class="nav-item"><a class="nav-link nav-pill" href="#about" data-i18n="nav_about">About</a></li>
+          <li class="nav-item"><a class="nav-link nav-pill" href="#skills" data-i18n="nav_skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link nav-pill" href="#experience" data-i18n="nav_exp">Experience</a></li>
+          <li class="nav-item"><a class="nav-link nav-pill" href="#education" data-i18n="nav_edu">Education</a></li>
+          <li class="nav-item"><a class="nav-link nav-pill" href="#contact" data-i18n="nav_contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero-section" id="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-particles" id="particles"></div>
+    <div class="container hero-content">
+      <div class="row align-items-center min-vh-100">
+        <div class="col-lg-7 order-2 order-lg-1">
+          <div class="hero-badge mb-3" data-aos="fade-up">
+            <i class="bi bi-shield-check-fill me-2"></i>
+            <span data-i18n="hero_badge">Available for Opportunities</span>
+          </div>
+          <h1 class="hero-name" data-aos="fade-up" data-aos-delay="100">
+            Reza Maulana<br/>
+            <span class="hero-name-accent">Alif Utama</span>
+          </h1>
+          <div class="hero-title-wrap" data-aos="fade-up" data-aos-delay="200">
+            <span class="hero-title-prefix">&gt;_</span>
+            <span class="hero-title-text" id="typingText"></span>
+            <span class="typing-cursor">|</span>
+          </div>
+          <p class="hero-desc" data-aos="fade-up" data-aos-delay="300" data-i18n="hero_desc">
+            Application Support Engineer (L2) with 5+ years of experience managing enterprise applications in banking and telecom environments.
+          </p>
+          <div class="hero-stats d-flex flex-wrap gap-4 mb-4" data-aos="fade-up" data-aos-delay="400">
+            <div class="stat-item">
+              <span class="stat-num" data-count="5">0</span><span class="stat-num">+</span>
+              <span class="stat-label" data-i18n="stat_years">Years Exp.</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num" data-count="10">0</span><span class="stat-num">+</span>
+              <span class="stat-label" data-i18n="stat_apps">Apps Supported</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num" data-count="24">0</span><span class="stat-num">/7</span>
+              <span class="stat-label" data-i18n="stat_support">Support Ready</span>
+            </div>
+          </div>
+          <div class="hero-actions d-flex flex-wrap gap-3" data-aos="fade-up" data-aos-delay="500">
+            <a href="#contact" class="btn btn-primary-custom">
+              <i class="bi bi-send-fill me-2"></i>
+              <span data-i18n="btn_contact">Contact Me</span>
+            </a>
+            <a href="#experience" class="btn btn-outline-custom">
+              <i class="bi bi-briefcase-fill me-2"></i>
+              <span data-i18n="btn_exp">View Experience</span>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-5 order-1 order-lg-2 text-center mb-5 mb-lg-0" data-aos="fade-left" data-aos-delay="300">
+          <div class="hero-avatar-wrap">
+            <div class="avatar-ring"></div>
+            <div class="avatar-ring-2"></div>
+            <div class="hero-avatar">
+              <i class="bi bi-person-fill avatar-icon"></i>
+            </div>
+            <div class="avatar-badge-1"><i class="bi bi-database-fill-gear"></i></div>
+            <div class="avatar-badge-2"><i class="bi bi-cpu-fill"></i></div>
+            <div class="avatar-badge-3"><i class="bi bi-cloud-check-fill"></i></div>
+            <div class="avatar-badge-4"><i class="bi bi-terminal-fill"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span data-i18n="scroll_hint">Scroll Down</span>
+      <i class="bi bi-chevron-double-down"></i>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="section-pad" id="about">
+    <div class="container">
+      <div class="section-header text-center mb-5" data-aos="fade-up">
+        <span class="section-tag" data-i18n="about_tag">Who I Am</span>
+        <h2 class="section-title" data-i18n="about_title">About Me</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-5" data-aos="fade-right">
+          <div class="about-card-wrap">
+            <div class="about-info-card">
+              <div class="info-row">
+                <span class="info-icon"><i class="bi bi-person-badge-fill"></i></span>
+                <div>
+                  <span class="info-label" data-i18n="info_name">Full Name</span>
+                  <span class="info-val">Reza Maulana Alif Utama</span>
+                </div>
+              </div>
+              <div class="info-row">
+                <span class="info-icon"><i class="bi bi-briefcase-fill"></i></span>
+                <div>
+                  <span class="info-label" data-i18n="info_role">Current Role</span>
+                  <span class="info-val">IT Coordinator – Bank BTN</span>
+                </div>
+              </div>
+              <div class="info-row">
+                <span class="info-icon"><i class="bi bi-geo-alt-fill"></i></span>
+                <div>
+                  <span class="info-label" data-i18n="info_loc">Location</span>
+                  <span class="info-val">Jakarta, Indonesia</span>
+                </div>
+              </div>
+              <div class="info-row">
+                <span class="info-icon"><i class="bi bi-mortarboard-fill"></i></span>
+                <div>
+                  <span class="info-label" data-i18n="info_edu">Education</span>
+                  <span class="info-val">S1 Electrical Engineering</span>
+                </div>
+              </div>
+              <div class="info-row">
+                <span class="info-icon"><i class="bi bi-clock-fill"></i></span>
+                <div>
+                  <span class="info-label" data-i18n="info_avail">Availability</span>
+                  <span class="info-val" data-i18n="info_avail_val">24/7 Shift – Open to Relocation</span>
+                </div>
+              </div>
+              <div class="info-row">
+                <span class="info-icon"><i class="bi bi-globe2"></i></span>
+                <div>
+                  <span class="info-label" data-i18n="info_lang">Languages</span>
+                  <span class="info-val">Indonesian (Native), English (Professional)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-7" data-aos="fade-left">
+          <div class="about-text-wrap">
+            <p class="about-text" data-i18n="about_p1">
+              I am a dedicated <strong>Application Support Engineer (L2)</strong> with over 5 years of hands-on experience in managing and supporting enterprise-grade applications across banking and telecommunications sectors.
+            </p>
+            <p class="about-text" data-i18n="about_p2">
+              My expertise spans <strong>TIBCO Middleware</strong>, Oracle SQL, Linux/Unix administration, shell scripting, and monitoring tools like ELK Kibana and Grafana. I thrive in high-availability production environments where system stability and rapid incident resolution are critical.
+            </p>
+            <p class="about-text" data-i18n="about_p3">
+              I am experienced in <strong>incident management</strong>, root cause analysis (RCA), release deployments, and cross-functional team coordination. I am comfortable working in 24/7 shift environments and multicultural teams.
+            </p>
+            <div class="about-highlights d-flex flex-wrap gap-3 mt-4">
+              <div class="highlight-chip"><i class="bi bi-check-circle-fill me-2"></i><span data-i18n="chip_incident">Incident Management</span></div>
+              <div class="highlight-chip"><i class="bi bi-check-circle-fill me-2"></i><span data-i18n="chip_rca">Root Cause Analysis</span></div>
+              <div class="highlight-chip"><i class="bi bi-check-circle-fill me-2"></i><span data-i18n="chip_deploy">Release Deployment</span></div>
+              <div class="highlight-chip"><i class="bi bi-check-circle-fill me-2"></i><span data-i18n="chip_monitor">System Monitoring</span></div>
+              <div class="highlight-chip"><i class="bi bi-check-circle-fill me-2"></i><span data-i18n="chip_sla">SLA Management</span></div>
+              <div class="highlight-chip"><i class="bi bi-check-circle-fill me-2"></i><span data-i18n="chip_auto">Automation Scripting</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section class="section-pad section-alt" id="skills">
+    <div class="container">
+      <div class="section-header text-center mb-5" data-aos="fade-up">
+        <span class="section-tag" data-i18n="skills_tag">What I Know</span>
+        <h2 class="section-title" data-i18n="skills_title">Technical Skills</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <!-- Skill Category Cards -->
+      <div class="row g-4">
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+                <div class="skill-card">
+                    <div class="skill-card-icon"><i class="bi bi-code-slash"></i></div>
+                    <h5 class="skill-card-title" data-i18n="sk_prog">Programming & Scripting</h5>
+                    <div class="skill-tags">
+                    <span class="skill-tag">PHP</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">Shell Scripting</span>
+                    </div>
+                </div>
+            </div>
+
+
+            
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="skill-card">
+                    <div class="skill-card-icon"><i class="bi bi-database-fill"></i></div>
+                        <h5 class="skill-card-title" data-i18n="sk_db">Database</h5>
+                        <div class="skill-tags">
+                        <span class="skill-tag">Oracle SQL</span>
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="skill-card">
+                    <div class="skill-card-icon"><i class="bi bi-diagram-3-fill"></i></div>
+                    <h5 class="skill-card-title" data-i18n="sk_mid">Middleware & Integration</h5>
+                    <div class="skill-tags">
+                        <span class="skill-tag">TIBCO BW 5.x</span>
+                        <span class="skill-tag">TIBCO BW 6.x</span>
+                        <span class="skill-tag">TIBCO EMS</span>
+                        <span class="skill-tag">TIBCO Hawk</span>
+                        <span class="skill-tag">TIBCO BWCE</span>
+                        <span class="skill-tag">REST API</span>
+                        <span class="skill-tag">SOAP/WSDL</span>
+                        <span class="skill-tag">TIBCO MASHERY</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="skill-card">
+                    <div class="skill-card-icon"><i class="bi bi-terminal-fill"></i></div>
+                    <h5 class="skill-card-title" data-i18n="sk_os">Operating System</h5>
+                    <div class="skill-tags">
+                    <span class="skill-tag">Redhat Linux (RHEL)</span>
+                    <span class="skill-tag">Unix (AIX)</span>
+                    <span class="skill-tag">Windows Server</span>
+                    <span class="skill-tag">Openshift Container Platform</span>
+                    <span class="skill-tag">Docker</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+                <div class="skill-card">
+                    <div class="skill-card-icon"><i class="bi bi-graph-up-arrow"></i></div>
+                    <h5 class="skill-card-title" data-i18n="sk_mon">Monitoring & Logging</h5>
+                    <div class="skill-tags">
+                    <span class="skill-tag">ELK Kibana</span>
+                    <span class="skill-tag">Grafana</span>
+                    <span class="skill-tag">ScienceLogic</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
+                <div class="skill-card">
+                    <div class="skill-card-icon"><i class="bi bi-tools"></i></div>
+                    <h5 class="skill-card-title" data-i18n="sk_tools">Tools & Platform</h5>
+                    <div class="skill-tags">
+                    <span class="skill-tag">JIRA</span>
+                    <span class="skill-tag">ServiceNow</span>
+                    <span class="skill-tag">Git</span>
+                    <span class="skill-tag">Jenkins</span>
+                    <span class="skill-tag">Docker</span>
+                    <span class="skill-tag">Ansible</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+      <!-- end row skills -->
+
+    </div>
+  </section>
+
+  <!-- ===== EXPERIENCE ===== -->
+  <section class="section-pad" id="experience">
+    <div class="container">
+      <div class="section-header text-center mb-5" data-aos="fade-up">
+        <span class="section-tag" data-i18n="exp_tag">My Journey</span>
+        <h2 class="section-title" data-i18n="exp_title">Work Experience</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="timeline">
+
+        <!-- Job 1 -->
+        <div class="timeline-item" data-aos="fade-up" data-aos-delay="0">
+          <div class="timeline-dot"><i class="bi bi-building-fill"></i></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h5 class="timeline-role" data-i18n="job1_role">IT Coordinator – Application Support</h5>
+                <span class="timeline-company"><i class="bi bi-bank2 me-1"></i>Bank BTN (PT Bank Tabungan Negara)</span>
+              </div>
+              <span class="timeline-period">December 2025 – <span data-i18n="present">Present</span></span>
+            </div>
+            <div class="timeline-body">
+              <ul class="timeline-list">
+                <li data-i18n="job1_t1">Manage and monitor TIBCO Middleware (BW 5.x & 6.x) for core banking integration services.</li>
+                <li data-i18n="job1_t2">Handle L2 incident escalation, perform root cause analysis (RCA), and coordinate with vendors for resolution.</li>
+                <li data-i18n="job1_t3">Perform release deployment and change management activities in production environment.</li>
+                <li data-i18n="job1_t4">Monitor application health using ELK Kibana and Grafana dashboards.</li>
+                <li data-i18n="job1_t5">Develop shell scripts to automate routine operational tasks and reduce manual effort.</li>
+                <li data-i18n="job1_t6">Coordinate with development teams, infrastructure, and business units to ensure SLA compliance.</li>
+                <li data-i18n="job1_t7">Maintain and update operational runbooks, SOPs, and technical documentation.</li>
+              </ul>
+              <div class="timeline-tags">
+                <span class="tl-tag">Docker</span>
+                <span class="tl-tag">Oracle SQL</span>
+                <span class="tl-tag">ELK Kibana</span>
+                <span class="tl-tag">Grafana</span>
+                <span class="tl-tag">Linux</span>
+                <span class="tl-tag">Shell Script</span>
+                <span class="tl-tag">Zimbra Email</span>
+                <span class="tl-tag">Postfix Email</span>
+                <span class="tl-tag">Alicloud</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Job 2 -->
+        <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+          <div class="timeline-dot"><i class="bi bi-building-fill"></i></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h5 class="timeline-role" data-i18n="job2_role">Application Support Engineer L2</h5>
+                <span class="timeline-company"><i class="bi bi-telephone-fill me-1"></i>INDOSAT & Tri (3) (via Vendor)</span>
+              </div>
+              <span class="timeline-period">2020 – 2025</span>
+            </div>
+            <div class="timeline-body">
+              <ul class="timeline-list">
+                <li data-i18n="job2_t1">Provided L2 support for TIBCO-based middleware applications in a high-traffic telecom environment.</li>
+                <li data-i18n="job2_t2">Monitored message queues, EMS topics, and service flows to ensure zero-downtime operations.</li>
+                <li data-i18n="job2_t3">Performed log analysis using Splunk and Kibana to identify and resolve application anomalies.</li>
+                <li data-i18n="job2_t4">Executed database queries (Oracle SQL) for data validation and incident investigation.</li>
+                <li data-i18n="job2_t5">Participated in 24/7 on-call rotation and shift-based support coverage.</li>
+                <li data-i18n="job2_t6">Collaborated with L3 engineers and vendors for complex issue resolution and patch deployment.</li>
+              </ul>
+              <div class="timeline-tags">
+                <span class="tl-tag">TIBCO EMS</span>
+                <span class="tl-tag">TIBCO BW 5.x</span>
+                <span class="tl-tag">TIBCO BWCE</span>
+                <span class="tl-tag">TIBCO Mashery</span>
+                <span class="tl-tag">Oracle SQL</span>
+                <span class="tl-tag">Unix AIX</span>
+                <span class="tl-tag">OTRS</span>
+                <span class="tl-tag">JIRA</span>
+                <span class="tl-tag">ServiceNow</span>
+                <span class="tl-tag">ELK Kibana</span>
+                <span class="tl-tag">Grafana</span>
+                <span class="tl-tag">ScienceLogic</span>
+                <span class="tl-tag">Nokia iLink</span>
+                <span class="tl-tag">RITA Retailer Apps</span>
+                <span class="tl-tag">BimaApps</span>
+                <span class="tl-tag">VMS (Voucher Management System)</span>
+                <span class="tl-tag">Bima CMS (Customer Management System)</span>
+                <span class="tl-tag">Pretups</span>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Job 3
+        <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+          <div class="timeline-dot"><i class="bi bi-building-fill"></i></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h5 class="timeline-role" data-i18n="job3_role">Junior IT Support / Helpdesk L1</h5>
+                <span class="timeline-company"><i class="bi bi-pc-display me-1"></i>PT Sigma Cipta Caraka (Telkomsigma)</span>
+              </div>
+              <span class="timeline-period">2019 – 2020</span>
+            </div>
+            <div class="timeline-body">
+              <ul class="timeline-list">
+                <li data-i18n="job3_t1">Handled first-level incident tickets and user requests via ticketing system.</li>
+                <li data-i18n="job3_t2">Performed basic troubleshooting for application, network, and hardware issues.</li>
+                <li data-i18n="job3_t3">Escalated unresolved issues to L2/L3 teams with proper documentation.</li>
+                <li data-i18n="job3_t4">Assisted in system monitoring and daily health check reporting.</li>
+              </ul>
+              <div class="timeline-tags">
+                <span class="tl-tag">Helpdesk</span>
+                <span class="tl-tag">ITSM</span>
+                <span class="tl-tag">Windows Server</span>
+                <span class="tl-tag">Networking</span>
+              </div>
+            </div>
+          </div>
+        </div> -->
+
+      </div><!-- end timeline -->
+    </div>
+  </section>
+
+  <!-- ===== EDUCATION ===== -->
+  <section class="section-pad section-alt" id="education">
+    <div class="container">
+      <div class="section-header text-center mb-5" data-aos="fade-up">
+        <span class="section-tag" data-i18n="edu_tag">Academic Background</span>
+        <h2 class="section-title" data-i18n="edu_title">Education & Certification</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Education -->
+        <div class="col-lg-6" data-aos="fade-right">
+          <h5 class="sub-section-title mb-4"><i class="bi bi-mortarboard-fill me-2"></i><span data-i18n="edu_sub">Education</span></h5>
+          <div class="edu-card">
+            <div class="edu-icon"><i class="bi bi-building-fill-check"></i></div>
+            <div class="edu-body">
+              <h6 class="edu-degree" data-i18n="edu_degree">Bachelor of Engineering – Electrical Engineering</h6>
+              <span class="edu-school">Universitas Bhayangkara Surabaya</span>
+              <span class="edu-year">2013 – 2018</span>
+              <!-- <p class="edu-desc" data-i18n="edu_desc">Focused on telecommunications and computer networks. Final thesis on IoT-based monitoring systems.</p> -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Certifications -->
+        <div class="col-lg-6" data-aos="fade-left">
+          <h5 class="sub-section-title mb-4"><i class="bi bi-patch-check-fill me-2"></i><span data-i18n="cert_sub">Certifications</span></h5>
+          <div class="cert-list">
+
+            <div class="cert-item">
+              <div class="cert-icon"><i class="bi bi-award-fill"></i></div>
+              <div class="cert-body">
+                <span class="cert-name">ITIL® Foundation v4</span>
+                <span class="cert-issuer">AXELOS / PeopleCert</span>
+                <span class="cert-year">2022</span>
+              </div>
+              <span class="cert-badge verified" data-i18n="cert_verified">Verified</span>
+            </div>
+
+            <div class="cert-item">
+              <div class="cert-icon"><i class="bi bi-award-fill"></i></div>
+              <div class="cert-body">
+                <span class="cert-name">TIBCO BusinessWorks 6 – Administration</span>
+                <span class="cert-issuer">TIBCO Software Inc.</span>
+                <span class="cert-year">2021</span>
+              </div>
+                            <span class="cert-badge verified" data-i18n="cert_verified">Verified</span>
+            </div>
+
+            <div class="cert-item">
+              <div class="cert-icon"><i class="bi bi-award-fill"></i></div>
+              <div class="cert-body">
+                <span class="cert-name">Oracle Database SQL Certified Associate</span>
+                <span class="cert-issuer">Oracle Corporation</span>
+                <span class="cert-year">2021</span>
+              </div>
+              <span class="cert-badge verified" data-i18n="cert_verified">Verified</span>
+            </div>
+
+            <div class="cert-item">
+              <div class="cert-icon"><i class="bi bi-award-fill"></i></div>
+              <div class="cert-body">
+                <span class="cert-name">Linux Professional Institute (LPIC-1)</span>
+                <span class="cert-issuer">Linux Professional Institute</span>
+                <span class="cert-year">2020</span>
+              </div>
+              <span class="cert-badge verified" data-i18n="cert_verified">Verified</span>
+            </div>
+
+            <div class="cert-item">
+              <div class="cert-icon"><i class="bi bi-award-fill"></i></div>
+              <div class="cert-body">
+                <span class="cert-name">Elastic Certified Engineer</span>
+                <span class="cert-issuer">Elastic N.V.</span>
+                <span class="cert-year">2023</span>
+              </div>
+              <span class="cert-badge verified" data-i18n="cert_verified">Verified</span>
+            </div>
+
+          </div><!-- end cert-list -->
+        </div>
+      </div><!-- end row education -->
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS / ACHIEVEMENTS ===== -->
+  <section class="section-pad" id="projects">
+    <div class="container">
+      <div class="section-header text-center mb-5" data-aos="fade-up">
+        <span class="section-tag" data-i18n="proj_tag">What I've Done</span>
+        <h2 class="section-title" data-i18n="proj_title">Key Projects & Achievements</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="row g-4">
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+          <div class="project-card">
+            <div class="project-card-top">
+              <div class="project-icon"><i class="bi bi-diagram-3-fill"></i></div>
+              <span class="project-year">2023</span>
+            </div>
+            <h6 class="project-title" data-i18n="proj1_title">TIBCO Middleware Migration BW5 → BW6</h6>
+            <p class="project-desc" data-i18n="proj1_desc">
+              Led the operational support during migration of 30+ integration services from TIBCO BW 5.x to BW 6.x at Bank BTN, ensuring zero downtime during cutover.
+            </p>
+            <div class="project-tags">
+              <span class="tl-tag">TIBCO BW6</span>
+              <span class="tl-tag">Migration</span>
+              <span class="tl-tag">Zero Downtime</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="project-card">
+            <div class="project-card-top">
+              <div class="project-icon"><i class="bi bi-robot"></i></div>
+              <span class="project-year">2022</span>
+            </div>
+            <h6 class="project-title" data-i18n="proj2_title">Automated Health Check & Alert System</h6>
+            <p class="project-desc" data-i18n="proj2_desc">
+              Developed shell scripts and Python automation to perform daily health checks on middleware services, reducing manual effort by 60% and enabling proactive alerting via email/Telegram.
+            </p>
+            <div class="project-tags">
+              <span class="tl-tag">Shell Script</span>
+              <span class="tl-tag">Python</span>
+              <span class="tl-tag">Automation</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="project-card">
+            <div class="project-card-top">
+              <div class="project-icon"><i class="bi bi-bar-chart-fill"></i></div>
+              <span class="project-year">2022</span>
+            </div>
+            <h6 class="project-title" data-i18n="proj3_title">Centralized Monitoring Dashboard</h6>
+            <p class="project-desc" data-i18n="proj3_desc">
+              Built a unified Grafana + ELK Kibana monitoring dashboard for all middleware and application services, improving incident detection time by 40%.
+            </p>
+            <div class="project-tags">
+              <span class="tl-tag">Grafana</span>
+              <span class="tl-tag">ELK Kibana</span>
+              <span class="tl-tag">Monitoring</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="project-card">
+            <div class="project-card-top">
+              <div class="project-icon"><i class="bi bi-shield-fill-check"></i></div>
+              <span class="project-year">2021</span>
+            </div>
+            <h6 class="project-title" data-i18n="proj4_title">SLA Improvement Initiative</h6>
+            <p class="project-desc" data-i18n="proj4_desc">
+              Spearheaded an SLA improvement program at Telkomsel that reduced average incident resolution time from 4 hours to under 90 minutes through better runbooks and escalation paths.
+            </p>
+            <div class="project-tags">
+              <span class="tl-tag">SLA</span>
+              <span class="tl-tag">ITSM</span>
+              <span class="tl-tag">Process Improvement</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+          <div class="project-card">
+            <div class="project-card-top">
+              <div class="project-icon"><i class="bi bi-file-earmark-text-fill"></i></div>
+              <span class="project-year">2021</span>
+            </div>
+            <h6 class="project-title" data-i18n="proj5_title">Runbook & SOP Documentation Overhaul</h6>
+            <p class="project-desc" data-i18n="proj5_desc">
+              Rewrote and standardized 50+ operational runbooks and SOPs for middleware support team, significantly reducing onboarding time for new engineers.
+            </p>
+            <div class="project-tags">
+              <span class="tl-tag">Documentation</span>
+              <span class="tl-tag">Confluence</span>
+              <span class="tl-tag">Knowledge Base</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
+          <div class="project-card">
+            <div class="project-card-top">
+              <div class="project-icon"><i class="bi bi-cloud-arrow-up-fill"></i></div>
+              <span class="project-year">2023</span>
+            </div>
+            <h6 class="project-title" data-i18n="proj6_title">CI/CD Pipeline for App Deployment</h6>
+            <p class="project-desc" data-i18n="proj6_desc">
+              Assisted in setting up Jenkins-based CI/CD pipeline for automated deployment of middleware artifacts, reducing deployment time by 50% and minimizing human error.
+            </p>
+            <div class="project-tags">
+              <span class="tl-tag">Jenkins</span>
+              <span class="tl-tag">CI/CD</span>
+              <span class="tl-tag">Docker</span>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- end row projects -->
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section-pad section-alt" id="contact">
+    <div class="container">
+      <div class="section-header text-center mb-5" data-aos="fade-up">
+        <span class="section-tag" data-i18n="contact_tag">Get In Touch</span>
+        <h2 class="section-title" data-i18n="contact_title">Contact Me</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="row g-4 justify-content-center">
+
+        <!-- Contact Info -->
+        <div class="col-lg-5" data-aos="fade-right">
+          <div class="contact-info-wrap">
+            <p class="contact-intro" data-i18n="contact_intro">
+              I'm open to new opportunities, collaborations, or just a friendly chat about tech. Feel free to reach out through any of the channels below.
+            </p>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="bi bi-envelope-fill"></i></div>
+              <div>
+                <span class="contact-label" data-i18n="c_email">Email</span>
+                <a href="mailto:r.maulanalief@email.com" class="contact-val">r.maulanalief@email.com</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="bi bi-telephone-fill"></i></div>
+              <div>
+                <span class="contact-label" data-i18n="c_phone">Phone / WhatsApp</span>
+                <a href="https://wa.me/6281553380745" class="contact-val" target="_blank">+62 815-5338-0745</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="bi bi-linkedin"></i></div>
+              <div>
+                <span class="contact-label">LinkedIn</span>
+                <a href="https://www.linkedin.com/in/reza-maulana-alief-5a3798148" class="contact-val" target="_blank">linkedin.com/in/reza-maulana-alief</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="bi bi-github"></i></div>
+              <div>
+                <span class="contact-label">GitHub</span>
+                <a href="https://github.com/rezamaulana" class="contact-val" target="_blank">github.com/rezamaulana</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="bi bi-geo-alt-fill"></i></div>
+              <div>
+                <span class="contact-label" data-i18n="c_loc">Location</span>
+                <span class="contact-val">Jakarta, Indonesia</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="col-lg-7" data-aos="fade-left">
+          <form class="contact-form" id="contactForm" onsubmit="submitForm(event)">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <div class="form-group-custom">
+                  <label data-i18n="form_name">Your Name</label>
+                  <input type="text" class="form-control-custom" id="formName" placeholder="John Doe" required/>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group-custom">
+                  <label data-i18n="form_email">Your Email</label>
+                  <input type="email" class="form-control-custom" id="formEmail" placeholder="john@example.com" required/>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-group-custom">
+                  <label data-i18n="form_subject">Subject</label>
+                  <input type="text" class="form-control-custom" id="formSubject" placeholder="Job Opportunity / Collaboration" required/>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-group-custom">
+                  <label data-i18n="form_msg">Message</label>
+                  <textarea class="form-control-custom" id="formMsg" rows="5" placeholder="Write your message here..." required></textarea>
+                </div>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-primary-custom w-100" id="submitBtn">
+                  <i class="bi bi-send-fill me-2"></i>
+                  <span data-i18n="form_send">Send Message</span>
+                </button>
+              </div>
+              <div class="col-12">
+                <div class="form-alert" id="formAlert"></div>
+              </div>
+            </div>
+          </form>
+        </div>
+
+      </div><!-- end row contact -->
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="brand-icon"><i class="bi bi-terminal-fill"></i></span>
+          <span class="brand-text">RMAU<span class="brand-dot">.</span></span>
+        </div>
+        <p class="footer-copy" data-i18n="footer_copy">
+          © 2024 Reza Maulana Alif Utama. Crafted with passion for technology.
+        </p>
+        <div class="footer-socials">
+          <a href="https://linkedin.com/in/rezamaulana" target="_blank" class="social-btn" title="LinkedIn">
+            <i class="bi bi-linkedin"></i>
+          </a>
+          <a href="https://github.com/rezamaulana" target="_blank" class="social-btn" title="GitHub">
+            <i class="bi bi-github"></i>
+          </a>
+          <a href="https://wa.me/6281234567890" target="_blank" class="social-btn" title="WhatsApp">
+            <i class="bi bi-whatsapp"></i>
+          </a>
+          <a href="mailto:reza.maulana@email.com" class="social-btn" title="Email">
+            <i class="bi bi-envelope-fill"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" onclick="scrollToTop()">
+    <i class="bi bi-arrow-up-short"></i>
+  </button>
+
+    <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // ===== DISABLE RIGHT CLICK & INSPECT =====
+    document.addEventListener('contextmenu', e => e.preventDefault());
+    document.addEventListener('keydown', function(e) {
+      if (
+        e.key === 'F12' ||
+        (e.ctrlKey && e.shiftKey && ['I','J','C','K'].includes(e.key)) ||
+        (e.ctrlKey && e.key === 'U') ||
+        (e.ctrlKey && e.key === 'S') ||
+        (e.ctrlKey && e.key === 'P')
+      ) { e.preventDefault(); return false; }
+    });
+    document.addEventListener('devtoolschange', e => {
+      if (e.detail.isOpen) document.body.innerHTML = '';
+    });
+    (function devBlock() {
+      const threshold = 160;
+      setInterval(() => {
+        if (
+          window.outerWidth - window.innerWidth > threshold ||
+          window.outerHeight - window.innerHeight > threshold
+        ) {
+          document.body.innerHTML = '<div style="display:flex;align-items:center;justify-content:center;height:100vh;background:#0a0a0f;color:#fff;font-family:monospace;font-size:1.5rem;">⛔ Access Denied</div>';
+        }
+      }, 500);
+    })();
+
+    // ===== LANGUAGE DATA =====
+    const i18n = {
+      en: {
+        nav_home: "Home", nav_about: "About", nav_skills: "Skills",
+        nav_exp: "Experience", nav_edu: "Education", nav_contact: "Contact",
+        hero_badge: "Available for Opportunities",
+        hero_desc: "Application Support Engineer (L2) with 5+ years of experience managing enterprise applications in banking and telecom environments.",
+        stat_years: "Years Exp.", stat_apps: "Apps Supported", stat_support: "Support Ready",
+        btn_contact: "Contact Me", btn_exp: "View Experience",
+        scroll_hint: "Scroll Down",
+        about_tag: "Who I Am", about_title: "About Me",
+        info_name: "Full Name", info_role: "Current Role", info_loc: "Location",
+        info_edu: "Education", info_avail: "Availability",
+        info_avail_val: "24/7 Shift – Open to Relocation",
+        info_lang: "Languages",
+        about_p1: "I am a dedicated <strong>Application Support Engineer (L2)</strong> with over 5 years of hands-on experience in managing and supporting enterprise-grade applications across banking and telecommunications sectors.",
+        about_p2: "My expertise spans <strong>TIBCO Middleware</strong>, Oracle SQL, Linux/Unix administration, shell scripting, and monitoring tools like ELK Kibana and Grafana. I thrive in high-availability production environments where system stability and rapid incident resolution are critical.",
+        about_p3: "I am experienced in <strong>incident management</strong>, root cause analysis (RCA), release deployments, and cross-functional team coordination. I am comfortable working in 24/7 shift environments and multicultural teams.",
+        chip_incident: "Incident Management", chip_rca: "Root Cause Analysis",
+        chip_deploy: "Release Deployment", chip_monitor: "System Monitoring",
+        chip_sla: "SLA Management", chip_auto: "Automation Scripting",
+        skills_tag: "What I Know", skills_title: "Technical Skills",
+        sk_prog: "Programming & Scripting", sk_db: "Database",
+        sk_mid: "Middleware & Integration", sk_os: "Operating System",
+        sk_mon: "Monitoring & Logging", sk_tools: "Tools & Platform",
+        prof_title: "Core Proficiency",
+        exp_tag: "My Journey", exp_title: "Work Experience",
+        present: "Present",
+        job1_role: "IT Coordinator – Application Support",
+        job1_t1: "Manage and monitor TIBCO Middleware (BW 5.x & 6.x) for core banking integration services.",
+        job1_t2: "Handle L2 incident escalation, perform root cause analysis (RCA), and coordinate with vendors for resolution.",
+        job1_t3: "Perform release deployment and change management activities in production environment.",
+        job1_t4: "Monitor application health using ELK Kibana and Grafana dashboards.",
+        job1_t5: "Develop shell scripts to automate routine operational tasks and reduce manual effort.",
+        job1_t6: "Coordinate with development teams, infrastructure, and business units to ensure SLA compliance.",
+        job1_t7: "Maintain and update operational runbooks, SOPs, and technical documentation.",
+        job2_role: "Application Support Engineer L2",
+        job2_t1: "Provided L2 support for TIBCO-based middleware applications in a high-traffic telecom environment.",
+        job2_t2: "Monitored message queues, EMS topics, and service flows to ensure zero-downtime operations.",
+        job2_t3: "Performed log analysis using Splunk and Kibana to identify and resolve application anomalies.",
+        job2_t4: "Executed database queries (Oracle SQL) for data validation and incident investigation.",
+        job2_t5: "Participated in 24/7 on-call rotation and shift-based support coverage.",
+        job2_t6: "Collaborated with L3 engineers and vendors for complex issue resolution and patch deployment.",
+        job3_role: "Junior IT Support / Helpdesk L1",
+        job3_t1: "Handled first-level incident tickets and user requests via ticketing system.",
+        job3_t2: "Performed basic troubleshooting for application, network, and hardware issues.",
+        job3_t3: "Escalated unresolved issues to L2/L3 teams with proper documentation.",
+        job3_t4: "Assisted in system monitoring and daily health check reporting.",
+        edu_tag: "Academic Background", edu_title: "Education & Certification",
+        edu_sub: "Education", cert_sub: "Certifications",
+        edu_degree: "Bachelor of Engineering – Electrical Engineering",
+        edu_desc: "Focused on telecommunications and computer networks. Final thesis on IoT-based monitoring systems.",
+        cert_verified: "Verified",
+        proj_tag: "What I've Done", proj_title: "Key Projects & Achievements",
+        proj1_title: "TIBCO Middleware Migration BW5 → BW6",
+        proj1_desc: "Led the operational support during migration of 30+ integration services from TIBCO BW 5.x to BW 6.x at Bank BTN, ensuring zero downtime during cutover.",
+        proj2_title: "Automated Health Check & Alert System",
+        proj2_desc: "Developed shell scripts and Python automation to perform daily health checks on middleware services, reducing manual effort by 60% and enabling proactive alerting via email/Telegram.",
+        proj3_title: "Centralized Monitoring Dashboard",
+        proj3_desc: "Built a unified Grafana + ELK Kibana monitoring dashboard for all middleware and application services, improving incident detection time by 40%.",
+        proj4_title: "SLA Improvement Initiative",
+        proj4_desc: "Spearheaded an SLA improvement program at Telkomsel that reduced average incident resolution time from 4 hours to under 90 minutes through better runbooks and escalation paths.",
+        proj5_title: "Runbook & SOP Documentation Overhaul",
+        proj5_desc: "Rewrote and standardized 50+ operational runbooks and SOPs for middleware support team, significantly reducing onboarding time for new engineers.",
+        proj6_title: "CI/CD Pipeline for App Deployment",
+        proj6_desc: "Assisted in setting up Jenkins-based CI/CD pipeline for automated deployment of middleware artifacts, reducing deployment time by 50% and minimizing human error.",
+        contact_tag: "Get In Touch", contact_title: "Contact Me",
+        contact_intro: "I'm open to new opportunities, collaborations, or just a friendly chat about tech. Feel free to reach out through any of the channels below.",
+        c_email: "Email", c_phone: "Phone / WhatsApp", c_loc: "Location",
+        form_name: "Your Name", form_email: "Your Email",
+        form_subject: "Subject", form_msg: "Message", form_send: "Send Message",
+        footer_copy: "© 2024 Reza Maulana Alif Utama. Crafted with passion for technology.",
+        form_success: "✅ Message sent successfully! I'll get back to you soon.",
+        form_error: "❌ Please fill in all fields correctly."
+      },
+      id: {
+        nav_home: "Beranda", nav_about: "Tentang", nav_skills: "Keahlian",
+        nav_exp: "Pengalaman", nav_edu: "Pendidikan", nav_contact: "Kontak",
+        hero_badge: "Terbuka untuk Peluang Baru",
+        hero_desc: "Application Support Engineer (L2) dengan pengalaman 5+ tahun mengelola aplikasi enterprise di lingkungan perbankan dan telekomunikasi.",
+        stat_years: "Tahun Pengalaman", stat_apps: "Aplikasi Didukung", stat_support: "Siap Support",
+        btn_contact: "Hubungi Saya", btn_exp: "Lihat Pengalaman",
+        scroll_hint: "Gulir ke Bawah",
+        about_tag: "Siapa Saya", about_title: "Tentang Saya",
+        info_name: "Nama Lengkap", info_role: "Posisi Saat Ini", info_loc: "Lokasi",
+        info_edu: "Pendidikan", info_avail: "Ketersediaan",
+        info_avail_val: "Shift 24/7 – Terbuka untuk Relokasi",
+        info_lang: "Bahasa",
+        about_p1: "Saya adalah <strong>Application Support Engineer (L2)</strong> yang berdedikasi dengan pengalaman lebih dari 5 tahun dalam mengelola dan mendukung aplikasi enterprise di sektor perbankan dan telekomunikasi.",
+        about_p2: "Keahlian saya mencakup <strong>TIBCO Middleware</strong>, Oracle SQL, administrasi Linux/Unix, shell scripting, dan tools monitoring seperti ELK Kibana dan Grafana. Saya berkembang di lingkungan produksi high-availability.",
+        about_p3: "Saya berpengalaman dalam <strong>manajemen insiden</strong>, analisis akar masalah (RCA), deployment rilis, dan koordinasi tim lintas fungsi. Saya nyaman bekerja dalam lingkungan shift 24/7 dan tim multikultural.",
+        chip_incident: "Manajemen Insiden", chip_rca: "Analisis Akar Masalah",
+        chip_deploy: "Deployment Rilis", chip_monitor: "Monitoring Sistem",
+        chip_sla: "Manajemen SLA", chip_auto: "Scripting Otomasi",
+        skills_tag: "Yang Saya Kuasai", skills_title: "Keahlian Teknis",
+        sk_prog: "Pemrograman & Scripting", sk_db: "Database",
+        sk_mid: "Middleware & Integrasi", sk_os: "Sistem Operasi",
+        sk_mon: "Monitoring & Logging", sk_tools: "Tools & Platform",
+        prof_title: "Tingkat Kemahiran",
+        exp_tag: "Perjalanan Saya", exp_title: "Pengalaman Kerja",
+        present: "Sekarang",
+        job1_role: "IT Coordinator – Application Support",
+        job1_t1: "Mengelola dan memantau TIBCO Middleware (BW 5.x & 6.x) untuk layanan integrasi core banking.",
+        job1_t2: "Menangani eskalasi insiden L2, melakukan analisis akar masalah (RCA), dan berkoordinasi dengan vendor.",
+        job1_t3: "Melakukan deployment rilis dan aktivitas manajemen perubahan di lingkungan produksi.",
+        job1_t4: "Memantau kesehatan aplikasi menggunakan dashboard ELK Kibana dan Grafana.",
+        job1_t5: "Mengembangkan shell script untuk mengotomasi tugas operasional rutin.",
+        job1_t6: "Berkoordinasi dengan tim pengembang, infrastruktur, dan unit bisnis untuk memastikan kepatuhan SLA.",
+        job1_t7: "Memelihara dan memperbarui runbook operasional, SOP, dan dokumentasi teknis.",
+        job2_role: "Application Support Engineer L2",
+        job2_t1: "Memberikan dukungan L2 untuk aplikasi middleware berbasis TIBCO di lingkungan telekomunikasi.",
+        job2_t2: "Memantau antrian pesan, topik EMS, dan alur layanan untuk memastikan operasi tanpa downtime.",
+        job2_t3: "Melakukan analisis log menggunakan Splunk dan Kibana untuk mengidentifikasi anomali aplikasi.",
+        job2_t4: "Menjalankan query database (Oracle SQL) untuk validasi data dan investigasi insiden.",
+        job2_t5: "Berpartisipasi dalam rotasi on-call 24/7 dan cakupan dukungan berbasis shift.",
+        job2_t6: "Berkolaborasi dengan engineer L3 dan vendor untuk resolusi masalah kompleks.",
+        job3_role: "Junior IT Support / Helpdesk L1",
+        job3_t1: "Menangani tiket insiden tingkat pertama dan permintaan pengguna melalui sistem tiket.",
+        job3_t2: "Melakukan troubleshooting dasar untuk masalah aplikasi, jaringan, dan perangkat keras.",
+        job3_t3: "Mengeskalaasi masalah yang belum terselesaikan ke tim L2/L3 dengan dokumentasi yang tepat.",
+        job3_t4: "Membantu pemantauan sistem dan pelaporan health check harian.",
+        edu_tag: "Latar Belakang Akademik", edu_title: "Pendidikan & Sertifikasi",
+        edu_sub: "Pendidikan", cert_sub: "Sertifikasi",
+        edu_degree: "Sarjana Teknik – Teknik Elektro",
+        edu_desc: "Fokus pada telekomunikasi dan jaringan komputer. Tugas akhir tentang sistem monitoring berbasis IoT.",
+        cert_verified: "Terverifikasi",
+        proj_tag: "Yang Telah Saya Lakukan", proj_title: "Proyek & Pencapaian Utama",
+        proj1_title: "Migrasi TIBCO Middleware BW5 → BW6",
+        proj1_desc: "Memimpin dukungan operasional selama migrasi 30+ layanan integrasi dari TIBCO BW 5.x ke BW 6.x di Bank BTN, memastikan zero downtime saat cutover.",
+        proj2_title: "Sistem Health Check & Alert Otomatis",
+        proj2_desc: "Mengembangkan shell script dan otomasi Python untuk health check harian layanan middleware, mengurangi upaya manual sebesar 60% dan mengaktifkan peringatan proaktif.",
+        proj3_title: "Dashboard Monitoring Terpusat",
+        proj3_desc: "Membangun dashboard monitoring Grafana + ELK Kibana terpadu untuk semua layanan middleware, meningkatkan waktu deteksi insiden sebesar 40%.",
+        proj4_title: "Inisiatif Peningkatan SLA",
+                proj4_desc: "Memimpin program peningkatan SLA di Telkomsel yang berhasil mengurangi rata-rata waktu resolusi insiden dari 4 jam menjadi kurang dari 90 menit melalui runbook dan jalur eskalasi yang lebih baik.",
+        proj5_title: "Pembaruan Dokumentasi Runbook & SOP",
+        proj5_desc: "Menulis ulang dan menstandarisasi 50+ runbook operasional dan SOP untuk tim support middleware, secara signifikan mengurangi waktu onboarding engineer baru.",
+        proj6_title: "CI/CD Pipeline untuk Deployment Aplikasi",
+        proj6_desc: "Membantu menyiapkan CI/CD pipeline berbasis Jenkins untuk deployment otomatis artefak middleware, mengurangi waktu deployment sebesar 50% dan meminimalkan kesalahan manusia.",
+        contact_tag: "Hubungi Saya", contact_title: "Kontak",
+        contact_intro: "Saya terbuka untuk peluang baru, kolaborasi, atau sekadar obrolan ramah tentang teknologi. Jangan ragu untuk menghubungi saya melalui saluran di bawah ini.",
+        c_email: "Email", c_phone: "Telepon / WhatsApp", c_loc: "Lokasi",
+        form_name: "Nama Anda", form_email: "Email Anda",
+        form_subject: "Subjek", form_msg: "Pesan", form_send: "Kirim Pesan",
+        footer_copy: "© 2024 Reza Maulana Alif Utama. Dibuat dengan semangat untuk teknologi.",
+        form_success: "✅ Pesan berhasil dikirim! Saya akan segera menghubungi Anda.",
+        form_error: "❌ Harap isi semua kolom dengan benar."
+      }
+    };
+
+    // ===== CURRENT LANGUAGE =====
+    let currentLang = 'en';
+
+    function setLang(lang) {
+      currentLang = lang;
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (i18n[lang][key] !== undefined) {
+          if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+            el.placeholder = i18n[lang][key];
+          } else {
+            el.innerHTML = i18n[lang][key];
+          }
+        }
+      });
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+      });
+    }
+
+    // ===== THEME TOGGLE =====
+    let isDark = true;
+    function toggleTheme() {
+      isDark = !isDark;
+      const html = document.documentElement;
+      const icon = document.getElementById('themeIcon');
+      if (isDark) {
+        html.setAttribute('data-theme', 'dark');
+        icon.className = 'bi bi-moon-stars-fill';
+      } else {
+        html.setAttribute('data-theme', 'light');
+        icon.className = 'bi bi-sun-fill';
+      }
+    }
+
+    // ===== TYPING EFFECT =====
+    const typingStrings = [
+      'Application Support L2',
+      'TIBCO Middleware Expert',
+      'Incident Management Pro',
+      'Linux / Unix Engineer',
+      'System Monitoring Specialist'
+    ];
+    let tIdx = 0, cIdx = 0, isDeleting = false;
+    function typeEffect() {
+      const el = document.getElementById('typingText');
+      if (!el) return;
+      const current = typingStrings[tIdx];
+      if (isDeleting) {
+        el.textContent = current.substring(0, cIdx - 1);
+        cIdx--;
+      } else {
+        el.textContent = current.substring(0, cIdx + 1);
+        cIdx++;
+      }
+      if (!isDeleting && cIdx === current.length) {
+        setTimeout(() => { isDeleting = true; }, 1800);
+      } else if (isDeleting && cIdx === 0) {
+        isDeleting = false;
+        tIdx = (tIdx + 1) % typingStrings.length;
+      }
+      setTimeout(typeEffect, isDeleting ? 60 : 100);
+    }
+    typeEffect();
+
+    // ===== COUNTER ANIMATION =====
+    function animateCounters() {
+      document.querySelectorAll('[data-count]').forEach(el => {
+        const target = parseInt(el.getAttribute('data-count'));
+        let count = 0;
+        const step = Math.ceil(target / 40);
+        const timer = setInterval(() => {
+          count += step;
+          if (count >= target) { count = target; clearInterval(timer); }
+          el.textContent = count;
+        }, 40);
+      });
+    }
+
+    // ===== PROGRESS BAR ANIMATION =====
+    function animateBars() {
+      document.querySelectorAll('.prof-fill').forEach(bar => {
+        const w = bar.getAttribute('data-width');
+        bar.style.width = w + '%';
+      });
+    }
+
+    // ===== INTERSECTION OBSERVER =====
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('aos-animate');
+          if (entry.target.id === 'hero') animateCounters();
+          if (entry.target.id === 'skills') animateBars();
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('[data-aos]').forEach(el => observer.observe(el));
+    document.querySelectorAll('section').forEach(el => observer.observe(el));
+
+    // ===== NAVBAR SCROLL =====
+    window.addEventListener('scroll', () => {
+      const nav = document.getElementById('mainNav');
+      const btn = document.getElementById('backToTop');
+      if (window.scrollY > 80) {
+        nav.classList.add('scrolled');
+        btn.classList.add('show');
+      } else {
+        nav.classList.remove('scrolled');
+        btn.classList.remove('show');
+      }
+
+      // Active nav link
+      const sections = document.querySelectorAll('section[id]');
+      let current = '';
+      sections.forEach(sec => {
+        if (window.scrollY >= sec.offsetTop - 120) current = sec.getAttribute('id');
+      });
+      document.querySelectorAll('.nav-pill').forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) link.classList.add('active');
+      });
+    });
+
+    // ===== SMOOTH SCROLL =====
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          // Close mobile menu
+          const menu = document.getElementById('navMenu');
+          if (menu.classList.contains('show')) {
+            document.querySelector('.custom-toggler').click();
+          }
+        }
+      });
+    });
+
+    // ===== BACK TO TOP =====
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // ===== PARTICLES =====
+    function createParticles() {
+      const container = document.getElementById('particles');
+      if (!container) return;
+      for (let i = 0; i < 30; i++) {
+        const p = document.createElement('div');
+        p.className = 'particle';
+        p.style.cssText = `
+          left:${Math.random()*100}%;
+          top:${Math.random()*100}%;
+          width:${Math.random()*4+2}px;
+          height:${Math.random()*4+2}px;
+          animation-delay:${Math.random()*6}s;
+          animation-duration:${Math.random()*10+8}s;
+        `;
+        container.appendChild(p);
+      }
+    }
+    createParticles();
+
+    // ===== CONTACT FORM =====
+    function submitForm(e) {
+      e.preventDefault();
+      const btn = document.getElementById('submitBtn');
+      const alert = document.getElementById('formAlert');
+      const name = document.getElementById('formName').value.trim();
+      const email = document.getElementById('formEmail').value.trim();
+      const subject = document.getElementById('formSubject').value.trim();
+      const msg = document.getElementById('formMsg').value.trim();
+
+      if (!name || !email || !subject || !msg) {
+        alert.className = 'form-alert error show';
+        alert.textContent = i18n[currentLang].form_error;
+        return;
+      }
+
+      btn.disabled = true;
+      btn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Sending...';
+
+      setTimeout(() => {
+        btn.disabled = false;
+        btn.innerHTML = '<i class="bi bi-send-fill me-2"></i>' + i18n[currentLang].form_send;
+        alert.className = 'form-alert success show';
+        alert.textContent = i18n[currentLang].form_success;
+        document.getElementById('contactForm').reset();
+        setTimeout(() => { alert.className = 'form-alert'; }, 5000);
+      }, 2000);
+    }
+
+    // ===== SKILL CARD HOVER TILT =====
+    document.querySelectorAll('.skill-card, .project-card').forEach(card => {
+      card.addEventListener('mousemove', function(e) {
+        const rect = this.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const cx = rect.width / 2;
+        const cy = rect.height / 2;
+        const rotX = ((y - cy) / cy) * 6;
+        const rotY = ((x - cx) / cx) * 6;
+        this.style.transform = `perspective(600px) rotateX(${-rotX}deg) rotateY(${rotY}deg) translateY(-6px)`;
+      });
+      card.addEventListener('mouseleave', function() {
+        this.style.transform = '';
+      });
+    });
+
+    // ===== INIT =====
+    window.addEventListener('load', () => {
+      animateCounters();
+      animateBars();
+      setLang('en');
+    });
+
+  </script>
+</body>
+</html>
